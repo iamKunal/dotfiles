@@ -1,0 +1,44 @@
+function daru(){
+  /home/linuxbrew/.linuxbrew/bin/$1 ${@:2}
+}
+
+## LINUX
+# function download(){
+#   URL=$( xclip -selection c -o )
+#   #curl "$URL" -o /dev/null 2> /dev/null 
+#   if [ $? -eq 0 ]; then
+#     aria2c -x16 "$URL" --seed-time=0 $@
+#   else
+#     print -P "%F{red}Not a valid URL!%f"
+#     return 1
+#  fi;
+# }
+
+function download(){
+  URL=$( pbpaste )
+  #curl "$URL" -o /dev/null 2> /dev/null 
+  if [ $? -eq 0 ]; then
+    aria2c -x16 "$URL" --seed-time=0 $@
+  else
+    print -P "%F{red}Not a valid URL!%f"
+    return 1
+ fi;
+}
+
+function serve(){
+  servefile "$(ls | fzy)";
+}
+
+##Dynamically Update prompt
+#TMOUT=5
+#TRAPALRM() {
+#    zle reset-prompt
+#}
+
+# This is for the mi lights
+function yeet() { (workon life && yeecli $@ && deactivate ) }
+
+function adb-mirror() {
+    ADB=$HOME/Documents/tools/platform-tools_r31.0.3-linux/platform-tools/adb && $ADB connect 192.168.1.8:$1 && ADB=$ADB scrcpy
+}
+

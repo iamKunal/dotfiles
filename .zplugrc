@@ -1,0 +1,126 @@
+
+####    ZPLUG    ######
+source ~/.zplug/init.zsh
+
+# ENHANCD
+zplug "b4b4r07/enhancd", use:init.sh
+
+##### ZDHARMA
+# history search multiword
+zstyle ":history-search-multi-word" page-size "8"                      # Number of entries to show (default is $LINES/3)
+zstyle ":history-search-multi-word" highlight-color "fg=yellow,bold"   # Color in which to highlight matched, searched text (default bg=17 on 256-color terminals)
+zstyle ":plugin:history-search-multi-word" synhl "yes"                 # Whether to perform syntax highlighting (default true)
+zstyle ":plugin:history-search-multi-word" active "underline"          # Effect on active history entry. Try: standout, bold, bg=blue (default underline)
+zstyle ":plugin:history-search-multi-word" check-paths "yes"           # Whether to check paths for existence and mark with magenta (default true)
+zstyle ":plugin:history-search-multi-word" clear-on-cancel "no"        # Whether pressing Ctrl-C or ESC should clear entered query
+zplug "zdharma-continuum/fast-syntax-highlighting"
+
+zplug "zdharma-continuum/history-search-multi-word"
+#zplug "zdharma/zsh-diff-so-fancy" #, as:command, use:bin/git-dsf
+#zplug "zdharma/zui"
+#zplug "zdharma/zbrowse"
+##### END ZDHARMA
+
+##### ZSH-USERS
+zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh
+#zplug "zsh-users/zsh-completions"
+
+
+##### ZSH Abbreviations
+zplug "momo-lab/zsh-abbrev-alias"
+##### END ZSH Abbreviations
+
+
+
+#### Install exa
+# zplug "ogham/exa", from:gh-r, as:command, rename-to:exa, use:"*linux*"
+zplug "ogham/exa", from:gh-r, as:command, rename-to:exa, use:"*macos-x86_64*"
+
+
+
+# #### Install greenclip
+# Not for Mac
+# zplug "erebe/greenclip", from:gh-r, as:command, use:"*greenclip*"
+
+#### Install td for todos
+# zplug "Swatto/td", from:gh-r, as:command, use:"*linux_amd64_td*", rename-to:td
+zplug "Swatto/td", from:gh-r, as:command, use:"*Darwin_ARM64*", rename-to:td
+
+#### Install direnv
+# zplug "direnv/direnv", from:gh-r, as:command, rename-to:"direnv", use:"*linux-amd64*"
+# Cannot use below, see https://github.com/zplug/zplug/issues/418
+# zplug "direnv/direnv", from:gh-r, as:command, rename-to:"direnv", use:"*darwin-arm64"
+zplug "ptavares/zsh-direnv"
+
+#### Install envsubst
+#zplug "a8m/envsubst", from:gh-r, as:command, rename-to:"envsubst", use:"*Linux-x86_64*"
+
+# #### Install b3 strace parser
+# zplug "dannykopping/b3", from:gh-r, as:command, use:"*b3*"
+
+#### OMZ
+zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/extract", from:oh-my-zsh
+zplug "plugins/battery", from:oh-my-zsh
+#specific omz libraries
+#zplug "robbyrussell/oh-my-zsh", use:"lib/{clipboard,history,key-bindings,misc,grep,termsupport}.zsh"
+
+zplug "robbyrussell/oh-my-zsh", use:"lib/{clipboard,history,termsupport}.zsh"
+
+#####    THEME - powerlevel9k
+DEFAULT_USER='assaxor'
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( context dir_writable virtualenv dir rbenv vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time ram vi_mode time ssh)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( vi_mode dir_writable virtualenv dir rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time ram ssh kubecontext)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
+POWERLEVEL9K_USER_ICON="\uf155" #   "\ue7a2" #"§" #"Ξ" #"\uF415"
+POWERLEVEL9K_ALWAYS_SHOW_USER=true
+#POWERLEVEL9K_HOME_FOLDER_ABBREVIATION="%F{red} $(print_icon 'HOME_ICON') %F{black}"
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0c6' #'\uE0C0 ' #'\uE0C0'
+POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\uE0BA'
+POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=$' \uE0BB0'
+POWERLEVEL9K_DIR_HOME_FOREGROUND='016'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='016'
+#POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='234'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='016'
+POWERLEVEL9K_TIME_FOREGROUND='016'
+POWERLEVEL9K_STATUS_OK_BACKGROUND='016'
+
+POWERLEVEL9K_VI_INSERT_MODE_STRING=""
+POWERLEVEL9K_VI_COMMAND_MODE_STRING=""
+
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{green} \uf155 ❯%f "
+
+
+#zplug "bhilburn/powerlevel9k", as:theme
+zplug "romkatv/powerlevel10k", as:theme
+
+#zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+#zplug "themes/theunraveler", from:oh-my-zsh, as:theme
+###### END THEME
+
+
+###### Custom Plugins
+# ZSH Bell
+# zplug "jpouellet/5278239", from:gist, use:zbell.sh
+# Shifted to:
+zplug "kevinywlui/zlong_alert.zsh"
+
+# # oh my tmux
+# zplug "gpakosz/.tmux", from:github, \
+#   hook-build:"ln -s -f $ZPLUG_REPOS/gpakosz/.tmux/.tmux.conf $HOME/ && touch $HOME/.tmux.conf.local"
+# ###### END Custom Plugins
+
+
+zplug "jhawthorn/fzy", from:local, hook-build:"brew install fzy"
+
+
+zplug load
+

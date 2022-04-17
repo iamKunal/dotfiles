@@ -1,0 +1,40 @@
+if zplug check momo-lab/zsh-abbrev-alias;
+then
+  export ABBREVIATIONS_HOME="$ZFILES_HOME/abbreviations"
+  source "$ABBREVIATIONS_HOME/abbreviate.plugin.zsh"
+  source "$ABBREVIATIONS_HOME/.abbrevs.zsh"
+fi
+
+
+
+
+#if [ "$SHELL" = '/usr/bin/zsh' ]
+#then
+#    case $TERM in
+#        rxvt|*merm)
+#         precmd() { print -Pn "\e]0;%m:%~\a" }
+#         preexec () { print -Pn "\e]0;$1\a" }
+#         ;;
+#    esac
+#fi
+
+#DISABLE_AUTO_TITLE="false"
+#
+#
+
+_direnv_hook() {
+  trap -- '' SIGINT;
+  eval "$(direnv export zsh)";
+  trap - SIGINT;
+}
+typeset -ag precmd_functions;
+if [[ -z ${precmd_functions[(r)_direnv_hook]} ]]; then
+  precmd_functions=( _direnv_hook ${precmd_functions[@]} )
+fi
+typeset -ag chpwd_functions;
+if [[ -z ${chpwd_functions[(r)_direnv_hook]} ]]; then
+  chpwd_functions=( _direnv_hook ${chpwd_functions[@]} )
+fi
+
+TODO_INIT_FILE='/tmp/todos_initialised'
+[ ! -f "$TODO_INIT_FILE" ] && td && touch "$TODO_INIT_FILE"

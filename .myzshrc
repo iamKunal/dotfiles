@@ -1,0 +1,36 @@
+
+#Pick item but stay in the menu
+bindkey -M menuselect "+" accept-and-menu-complete
+
+# recognize comments
+setopt interactivecomments
+
+# Virtualenvwrapper things
+export WORKON_HOME=$HOME/.virtualenvs
+# export PROJECT_HOME=$HOME/Devel
+# # Linux:
+# source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+# Mac
+source /opt/homebrew/bin/virtualenvwrapper_lazy.sh
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+
+
+
+# Control-B to download the currently copied URL.
+bindkey -s "^B" "^Q download^J"
+
+
+DISABLE_AUTO_TITLE=""
+
+
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+
+# # Gradle linux install
+# export PATH=$PATH:/opt/gradle/gradle-7.0/bin
+
+# source ~/.myzshrc_work

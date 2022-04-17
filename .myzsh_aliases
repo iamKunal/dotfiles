@@ -1,0 +1,64 @@
+#Setting the default text editor
+export EDITOR='vim'
+export VISUAL='vim'
+
+alias push='git push origin master'
+
+
+alias fzy='fzy -l 20'
+
+export FZF_DEFAULT_OPTS='--reverse --height=20'
+
+# Working with dotfiles
+alias dotfiles='/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# apt alias
+alias apt-get=apt
+alias py=ptpython
+alias py2=ptpython2
+alias py3=python3
+#list top 10 biggest directories/files
+alias disten='du -ahd1 | sort -rh | head -n10 '
+
+# exa aliases
+alias ll="exa -l --git --time-style=long-iso --group-directories-first"
+alias l="exa -la --git --time-style=long-iso --group-directories-first"
+alias la="exa -lahg --git --time-style=long-iso --group-directories-first"
+alias ls="exa --group-directories-first"
+
+#SUDO ALIAS
+alias sudo='sudo -p "$(print -P "  %F{red}\ue0c2%f%K{016} sudo %k%F{red}\ue0c0%f%   %F{247}Please enter password for [%f%F{green}${USER}%f%F{247}] : %f%k\n")" '
+
+#Download
+#alias download='aria2c -x16 $( xclip -selection c -o ) '
+
+#Custom Scripts
+export PATH=$HOME/Documents/scripts:$PATH
+
+# Already exported on MAC
+# export PATH=$PATH:/usr/local/bin
+
+#Python binaries from pip
+export PATH=~/.local/bin:$PATH
+
+# # Linuxbrew
+# export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+
+# #CTF Tools
+# export PATH=$PATH:~/Documents/tools/ctf-tools/bin
+
+
+export PYTHONIOENCODING='UTF-8'
+
+
+# alias pbpaste="xclip -o -s c"
+# alias pbcopy="xclip -selection clipboard"
+
+# alias ssh='TERM=xterm-color ssh '
+# alias gce='TERM=xterm-256color gcloud compute ssh'
+
+alias k9s='EDITOR=code k9s '
+alias tldr='docker run --rm -it -v ~/.tldr/:/root/.tldr/ nutellinoit/tldr'
+
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

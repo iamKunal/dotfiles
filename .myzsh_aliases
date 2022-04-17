@@ -57,7 +57,7 @@ export PYTHONIOENCODING='UTF-8'
 # alias ssh='TERM=xterm-color ssh '
 # alias gce='TERM=xterm-256color gcloud compute ssh'
 
-alias k9s='EDITOR=code k9s '
+alias k9s='EDITOR="code --wait" k9s '
 alias tldr='docker run --rm -it -v ~/.tldr/:/root/.tldr/ nutellinoit/tldr'
 
 export LC_CTYPE=en_US.UTF-8

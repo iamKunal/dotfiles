@@ -1,3 +1,5 @@
+# vim: syntax=zsh:
+
 #Setting the default text editor
 export EDITOR='vim'
 export VISUAL='vim'

@@ -1,3 +1,5 @@
+# vim: syntax=zsh:
+
 
 #Pick item but stay in the menu
 bindkey -M menuselect "+" accept-and-menu-complete

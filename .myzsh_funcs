@@ -1,3 +1,5 @@
+# vim: syntax=zsh:
+
 function daru(){
   /home/linuxbrew/.linuxbrew/bin/$1 ${@:2}
 }
@@ -48,5 +50,10 @@ function teleconnect() {
   if [[ ! -z "$telepresence_context_switch" ]]; then
     telepresence quit && telepresence connect --context "${telepresence_context_switch}"
   fi;
+}
+
+function linguist() {
+  _linguist_source_location=$1
+  docker run -v "${_linguist_source_location:-$PWD}":/code:ro --rm github-linguist github-linguist /code
 }
 

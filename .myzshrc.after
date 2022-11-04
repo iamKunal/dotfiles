@@ -1,3 +1,5 @@
+# vim: syntax=zsh:
+
 if zplug check momo-lab/zsh-abbrev-alias;
 then
   export ABBREVIATIONS_HOME="$ZFILES_HOME/abbreviations"

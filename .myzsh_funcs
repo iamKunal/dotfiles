@@ -42,3 +42,11 @@ function adb-mirror() {
     ADB=$HOME/Documents/tools/platform-tools_r31.0.3-linux/platform-tools/adb && $ADB connect 192.168.1.8:$1 && ADB=$ADB scrcpy
 }
 
+
+function teleconnect() {
+  telepresence_context_switch="$(kubectx | fzf)"
+  if [[ ! -z "$telepresence_context_switch" ]]; then
+    telepresence quit && telepresence connect --context "${telepresence_context_switch}"
+  fi;
+}
+

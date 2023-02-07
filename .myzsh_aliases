@@ -16,9 +16,13 @@ alias dotfiles='/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # apt alias
 alias apt-get=apt
+
+
 alias py=ptpython
 alias py2=ptpython2
 alias py3=python3
+alias python=python3
+
 #list top 10 biggest directories/files
 alias disten='du -ahd1 | sort -rh | head -n10 '
 
@@ -71,3 +75,5 @@ KREW_BIN_PATH="${HOME}/.krew/bin"
 if [ -d "$KREW_BIN_PATH" ]; then
   export PATH="${PATH}:${HOME}/.krew/bin"
 fi;
+
+alias docker-ssh='docker run -it --rm --privileged --pid=host justincormack/nsenter1 '

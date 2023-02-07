@@ -120,8 +120,13 @@ zplug "kevinywlui/zlong_alert.zsh"
 # ###### END Custom Plugins
 
 
-zplug "jhawthorn/fzy", from:local, hook-build:"brew install fzy"
+ZPLUG_LOG_LOAD_FAILURE=true
+#zplug "jhawthorn/fzy", from:local, hook-build:"brew install fzy"
 
+
+
+# Add linguist as docker image
+#`zplug "github/linguist", from:github, hook-build: "echo hello" #"docker buildx build -t github-linguist ."
 
 zplug load
 

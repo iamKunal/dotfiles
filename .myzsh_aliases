@@ -76,4 +76,6 @@ if [ -d "$KREW_BIN_PATH" ]; then
   export PATH="${PATH}:${HOME}/.krew/bin"
 fi;
 
+
+# the root fs of the vm is at /containers/services/docker/rootfs
 alias docker-ssh='docker run -it --rm --privileged --pid=host justincormack/nsenter1 '

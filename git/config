@@ -1,0 +1,8 @@
+[user]
+	email = assaxor@gmail.com
+	name = Kunal Gupta
+[init]
+	defaultBranch = main
+[http]
+	postBuffer = 524288000
+

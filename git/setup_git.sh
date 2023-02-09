@@ -4,5 +4,7 @@ set -x
 
 REAL_DIR=$(dirname -- "$0:A")
 
-git config --global core.excludesfile "$REAL_DIR/.gitignore_global"
+CONFIG_DIR="$HOME/.config/git"
 
+
+ln -s "$REAL_DIR" "$CONFIG_DIR"

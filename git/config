@@ -6,3 +6,8 @@
 [http]
 	postBuffer = 524288000
 
+
+
+[includeIf "gitdir:~/Documents/work/isec/"]
+  path = configs/isec.config
+

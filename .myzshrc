@@ -36,3 +36,12 @@ eval "$(pyenv virtualenv-init -)"
 # export PATH=$PATH:/opt/gradle/gradle-7.0/bin
 
 # source ~/.myzshrc_work
+
+## Brew Completions for installed formulae
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi

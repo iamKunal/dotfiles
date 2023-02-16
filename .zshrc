@@ -45,6 +45,7 @@ source "$ZFILES_HOME/.myzsh_aliases"
 
 
 ####    ZPLUG    ######
+export ZPLUG_HOME=$HOME/.zplug
 source "$ZFILES_HOME/.zplugrc"
 
 

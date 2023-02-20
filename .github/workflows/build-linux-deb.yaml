@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Setup version
-      run: echo "DEB_VERSION=0.1-$(date '+%s')-git-${{ env.GITHUB_SHA }}" >> $GITHUB_ENV
+      run: echo "DEB_VERSION=0.1-$(date '+%s')-git-${GITHUB_SHA}" >> $GITHUB_ENV
     - name: Set version
       run: sed -i -E 's/(# *)?(Version:).*/\2 '${{ env.DEB_VERSION }}'/g' linux/packages/kali-deb.ctl
     - name: Setup dependencies

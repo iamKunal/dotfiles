@@ -3,8 +3,8 @@ name: Build Linux Packages Deb
 on:
   push:
     branches: [ "main" ]
-  paths:
-    - 'linux/packages/**'
+    paths:
+      - 'linux/packages/**'
 
 jobs:
   build:

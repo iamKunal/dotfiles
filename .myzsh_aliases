@@ -57,8 +57,8 @@ export PATH=~/.local/bin:$PATH
 export PYTHONIOENCODING='UTF-8'
 
 
-# alias pbpaste="xclip -o -s c"
-# alias pbcopy="xclip -selection clipboard"
+isLinux && alias pbpaste="xclip -o -s c"
+isLinux && alias pbcopy="xclip -selection clipboard"
 
 # alias ssh='TERM=xterm-color ssh '
 # alias gce='TERM=xterm-256color gcloud compute ssh'

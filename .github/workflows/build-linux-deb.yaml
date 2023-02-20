@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
     paths:
       - 'linux/packages/**'
+      - '.github/workflows/build-linux-deb.yaml'
 
 jobs:
   build:

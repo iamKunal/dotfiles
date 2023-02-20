@@ -10,7 +10,7 @@ Package: assaxor-dotfiles
 # Version: <enter version here; defaults to 1.0>
 # Maintainer: Your Name <yourname@example.com>
 # Pre-Depends: <comma-separated list of packages>
-Depends: ack,exa,python3-virtualenvwrapper,fzy,fzf,tig
+Depends: ack,exa,python3-virtualenvwrapper,fzy,fzf,tig,nmon
 # Recommends: <comma-separated list of packages>
 # Suggests: <comma-separated list of packages>
 # Provides: <comma-separated list of packages>

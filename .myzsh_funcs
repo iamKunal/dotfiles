@@ -66,3 +66,9 @@ function linguist() {
   docker run -v "${_linguist_source_location:-$PWD}":/code:ro --rm github-linguist github-linguist /code
 }
 
+
+# https://github.com/nektos/act/wiki/Custom-container-engine
+function act() {
+  DOCKER_HOST="$(docker context inspect  $(docker context show) | jq -r '.[].Endpoints.docker.Host')" \
+  gh act $@;
+}

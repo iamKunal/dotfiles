@@ -1,5 +1,14 @@
 # vim: syntax=zsh:
 
+
+function isLinux() {
+  [[ $(uname) == 'Linux' ]];
+}
+
+function isMac() {
+  [[ $(uname) == 'Darwin' ]];
+}
+
 function daru(){
   /home/linuxbrew/.linuxbrew/bin/$1 ${@:2}
 }

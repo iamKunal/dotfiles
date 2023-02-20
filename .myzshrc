@@ -11,9 +11,9 @@ setopt interactivecomments
 export WORKON_HOME=$HOME/.virtualenvs
 # export PROJECT_HOME=$HOME/Devel
 # # Linux:
-# source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+isLinux && source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 # Mac
-source /opt/homebrew/bin/virtualenvwrapper_lazy.sh
+isMac && source /opt/homebrew/bin/virtualenvwrapper_lazy.sh
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
 
@@ -25,8 +25,8 @@ bindkey -s "^B" "^Q download^J"
 DISABLE_AUTO_TITLE=""
 
 
-
-export PATH="$HOME/.pyenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 

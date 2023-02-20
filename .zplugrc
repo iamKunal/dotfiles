@@ -33,9 +33,9 @@ zplug "momo-lab/zsh-abbrev-alias"
 
 
 
-#### Install exa
+#### Install exa, use brew/deb
 # zplug "ogham/exa", from:gh-r, as:command, rename-to:exa, use:"*linux*"
-zplug "ogham/exa", from:gh-r, as:command, rename-to:exa, use:"*macos-x86_64*"
+# zplug "ogham/exa", from:gh-r, as:command, rename-to:exa, use:"*macos-x86_64*"
 
 
 
@@ -43,9 +43,9 @@ zplug "ogham/exa", from:gh-r, as:command, rename-to:exa, use:"*macos-x86_64*"
 # Not for Mac
 # zplug "erebe/greenclip", from:gh-r, as:command, use:"*greenclip*"
 
-#### Install td for todos
+#### Install td for todos, need to add manually for linux
 # zplug "Swatto/td", from:gh-r, as:command, use:"*linux_amd64_td*", rename-to:td
-zplug "Swatto/td", from:gh-r, as:command, use:"*Darwin_ARM64*", rename-to:td
+# zplug "Swatto/td", from:gh-r, as:command, use:"*Darwin_ARM64*", rename-to:td
 
 #### Install direnv
 # zplug "direnv/direnv", from:gh-r, as:command, rename-to:"direnv", use:"*linux-amd64*"
@@ -118,6 +118,9 @@ zplug "kevinywlui/zlong_alert.zsh"
 # zplug "gpakosz/.tmux", from:github, \
 #   hook-build:"ln -s -f $ZPLUG_REPOS/gpakosz/.tmux/.tmux.conf $HOME/ && touch $HOME/.tmux.conf.local"
 # ###### END Custom Plugins
+
+### Reminds aliases
+zplug "MichaelAquilina/zsh-you-should-use"
 
 
 ZPLUG_LOG_LOAD_FAILURE=true

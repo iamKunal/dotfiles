@@ -39,4 +39,4 @@ if [[ -z ${chpwd_functions[(r)_direnv_hook]} ]]; then
 fi
 
 TODO_INIT_FILE='/tmp/todos_initialised'
-[ ! -f "$TODO_INIT_FILE" ] && td && touch "$TODO_INIT_FILE"
+isMac && [ ! -f "$TODO_INIT_FILE" ] && td && touch "$TODO_INIT_FILE"

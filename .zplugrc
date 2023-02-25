@@ -123,6 +123,10 @@ zplug "kevinywlui/zlong_alert.zsh"
 zplug "MichaelAquilina/zsh-you-should-use"
 
 
+### Install `dragon` for linux, make sure to install `libgtk-3-dev`
+isLinux && zplug "mwh/dragon", hook-build:"make install"
+
+
 ZPLUG_LOG_LOAD_FAILURE=true
 #zplug "jhawthorn/fzy", from:local, hook-build:"brew install fzy"
 

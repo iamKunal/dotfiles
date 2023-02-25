@@ -12,7 +12,7 @@ alias fzy='fzy -l 20'
 export FZF_DEFAULT_OPTS='--reverse --height=20'
 
 # Working with dotfiles
-alias dotfiles='/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='git -C "$ZFILES_HOME" '
 
 # apt alias
 alias apt-get=apt

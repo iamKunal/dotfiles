@@ -79,3 +79,4 @@ fabric.properties
 #Mac
 .DS_Store
 
+.localignore

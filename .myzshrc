@@ -37,11 +37,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # source ~/.myzshrc_work
 
-## Brew Completions for installed formulae
 
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
+isLinux && export HOMEBREW_BUNDLE_FILE="$ZFILES_HOME/linux/packages/Brewfile"
+isMac && export HOMEBREW_BUNDLE_FILE="$ZFILES_HOME/mac/packages/Brewfile"

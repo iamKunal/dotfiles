@@ -1,0 +1,12 @@
+# vim: syntax=zsh:
+
+if [[ -f '/home/linuxbrew/.linuxbrew/bin/brew' ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+
+## Brew Completions for installed formulae
+
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi

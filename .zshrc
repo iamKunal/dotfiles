@@ -7,6 +7,7 @@ fi
 
 # Place where your dotfiles folder exist
 export ZFILES_HOME="${HOME}/.zfiles"
+source "$ZFILES_HOME/.myzshrc.before"
 
 #export TERM="xterm-256color"
 

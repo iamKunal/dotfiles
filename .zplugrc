@@ -131,6 +131,8 @@ ZPLUG_LOG_LOAD_FAILURE=true
 #zplug "jhawthorn/fzy", from:local, hook-build:"brew install fzy"
 
 
+isLinux && zplug "telepresenceio/telepresence", from:gh-r, as:command, rename-to:telepresence, use:"*-linux-amd64"
+
 
 # Add linguist as docker image
 #`zplug "github/linguist", from:github, hook-build: "echo hello" #"docker buildx build -t github-linguist ."

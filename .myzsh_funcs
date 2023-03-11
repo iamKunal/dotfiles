@@ -65,10 +65,12 @@ function linguist() {
   _linguist_source_location=$1
   docker run -v "${_linguist_source_location:-$PWD}":/code:ro --rm github-linguist github-linguist /code
 }
-
+function get_docker_host() {
+  echo "$(docker context inspect  $(docker context show) | jq -r '.[].Endpoints.docker.Host')";
+}
 
 # https://github.com/nektos/act/wiki/Custom-container-engine
 function act() {
-  DOCKER_HOST="$(docker context inspect  $(docker context show) | jq -r '.[].Endpoints.docker.Host')" \
+  DOCKER_HOST="$(get_docker_host)" \
   gh act $@;
 }

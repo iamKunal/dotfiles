@@ -1,3 +1,7 @@
 brew 'k9s'
 brew 'kubectl'
 brew 'kubectx'
+brew 'kind'
+brew 'helmfile'
+brew 'yq'
+brew 'gomplate'

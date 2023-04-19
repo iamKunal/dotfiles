@@ -45,4 +45,4 @@ isMac && export HOMEBREW_BUNDLE_FILE="$ZFILES_HOME/mac/packages/Brewfile"
 # add completions for dotfiles to be same as git
 if type dotfiles &>/dev/null; then
   compdef _git dotfiles
-done
+fi

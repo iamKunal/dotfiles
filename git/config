@@ -11,3 +11,6 @@
 [includeIf "gitdir:~/Documents/work/isec/"]
   path = configs/isec.config
 
+[includeIf "gitdir:~/Documents/work/redgorillas/"]
+  path = configs/redgorillas.config
+

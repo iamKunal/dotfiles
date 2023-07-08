@@ -74,3 +74,23 @@ function act() {
   DOCKER_HOST="$(get_docker_host)" \
   gh act $@;
 }
+
+function ssh-ec2() {
+  if [[ -z $2 ]]; then
+    echo 'You must specify the instance user and instance name!'
+    return 1
+  fi
+
+  name=$2
+
+  instance=$(aws ec2 describe-instances --output=text --query 'Reservations[*].Instances[*].[InstanceId]' --filters "Name=tag:Name,Values=$name")
+
+  if [[ -z $instance ]]; then
+    echo "Instance $name not found!"
+    return 1
+  fi
+
+  # aws-ssm-ec2-proxy-command.sh will take care of the rest
+  ssh "$1@$instance";
+
+}

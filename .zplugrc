@@ -8,6 +8,16 @@ zplug "b4b4r07/enhancd", use:init.sh
 
 ##### ZDHARMA
 # history search multiword
+zstyle :plugin:history-search-multi-word reset-prompt-protect 1
+# Add from README
+schedprompt() {
+	zle && zle reset-prompt
+	sched +1 schedprompt
+}
+
+zmodload -i zsh/sched
+schedprompt
+
 zstyle ":history-search-multi-word" page-size "8"                      # Number of entries to show (default is $LINES/3)
 zstyle ":history-search-multi-word" highlight-color "fg=yellow,bold"   # Color in which to highlight matched, searched text (default bg=17 on 256-color terminals)
 zstyle ":plugin:history-search-multi-word" synhl "yes"                 # Whether to perform syntax highlighting (default true)
@@ -67,7 +77,7 @@ zplug "plugins/battery", from:oh-my-zsh
 #specific omz libraries
 #zplug "robbyrussell/oh-my-zsh", use:"lib/{clipboard,history,key-bindings,misc,grep,termsupport}.zsh"
 
-zplug "robbyrussell/oh-my-zsh", use:"lib/{clipboard,history,termsupport}.zsh"
+zplug "robbyrussell/oh-my-zsh", use:"lib/{functions,clipboard,history,termsupport}.zsh"
 
 #####    THEME - powerlevel9k
 DEFAULT_USER='assaxor'

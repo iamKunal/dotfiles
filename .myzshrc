@@ -46,3 +46,7 @@ isMac && export HOMEBREW_BUNDLE_FILE="$ZFILES_HOME/mac/packages/Brewfile"
 if type dotfiles &>/dev/null; then
   compdef _git dotfiles
 fi
+
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"

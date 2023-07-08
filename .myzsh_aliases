@@ -83,3 +83,13 @@ alias docker-ssh='docker run -it --rm --privileged --pid=host justincormack/nsen
 
 export GEM_HOME="$HOME/.gems"
 export PATH="$GEM_HOME/bin:$PATH"
+
+export GOPATH="$HOME/go"
+export PATH="$GOPATH:$PATH"
+
+export FLUTTER_SDK="$HOME/fvm/versions/stable/bin"
+export PATH="$FLUTTER_SDK:$PATH"
+
+# alias ec2=""
+
+isMac && export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/3.2.0/bin:$PATH"

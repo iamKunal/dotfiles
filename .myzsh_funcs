@@ -94,3 +94,10 @@ function ssh-ec2() {
   ssh "$1@$instance";
 
 }
+
+
+function for_all_gomod() {
+  GNU_FIND_CMD='find'
+  isMac && GNU_FIND_CMD='gfind'
+  $GNU_FIND_CMD -name go.mod -exec zsh -c 'cd $(dirname {}) && echo {} && '"$*" \;
+}

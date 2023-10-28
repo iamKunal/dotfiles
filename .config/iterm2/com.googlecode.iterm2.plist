@@ -1247,8 +1247,6 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string>/Users/assaxor/Documents/backgrounds/DALL·E 2023-02-03 02.36.29 - dramatic lighting on a futuristic charizard wings spread apart which is orange, blue and black in color, is breathing fire, against a black backdrop, -01-01.png</string>
 			<key>Background Image Mode</key>
 			<integer>3</integer>
 			<key>Badge Color</key>
@@ -1367,6 +1365,8 @@
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Use Transparency</key>
+			<true/>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -2705,8 +2705,6 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string>/Users/assaxor/Documents/backgrounds/DALL·E 2023-02-03 02.36.29 - dramatic lighting on a futuristic charizard wings spread apart which is orange, blue and black in color, is breathing fire, against a black backdrop, -01-01.png</string>
 			<key>Background Image Mode</key>
 			<integer>3</integer>
 			<key>Badge Color</key>

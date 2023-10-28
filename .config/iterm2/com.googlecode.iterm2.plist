@@ -1842,7 +1842,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ShureTechMonoNerdFontCompleteM-Regular 13</string>
+			<string>ShureTechMonoNFM 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Password Manager Automatically</key>
@@ -3339,7 +3339,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ShureTechMonoNerdFontCompleteM-Regular 13</string>
+			<string>ShureTechMonoNFM 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Toolbelt</key>

@@ -93,3 +93,5 @@ export PATH="$FLUTTER_SDK:$PATH"
 # alias ec2=""
 
 isMac && export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/3.2.0/bin:$PATH"
+_LIBPQ_BIN_PATH=/opt/homebrew/opt/libpq/bin
+isMac && [ -d "$_LIBPQ_BIN_PATH" ] && export PATH="$_LIBPQ_BIN_PATH:$PATH"

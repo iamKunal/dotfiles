@@ -14,3 +14,10 @@
 [includeIf "gitdir:~/Documents/work/redgorillas/"]
   path = configs/redgorillas.config
 
+[includeIf "gitdir:~/Documents/work/peerdb/"]
+  path = configs/peerdb.config
+
+[url "ssh://git@bitbucket.org/ambosta"]
+  insteadOf = https://bitbucket.org/ambosta
+[core]
+	autocrlf = false

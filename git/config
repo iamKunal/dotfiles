@@ -7,12 +7,8 @@
 	postBuffer = 524288000
 
 
-
 [includeIf "gitdir:~/Documents/work/isec/"]
   path = configs/isec.config
-
-[includeIf "gitdir:~/Documents/work/redgorillas/"]
-  path = configs/redgorillas.config
 
 [includeIf "gitdir:~/Documents/work/peerdb/"]
   path = configs/peerdb.config
@@ -21,3 +17,18 @@
   insteadOf = https://bitbucket.org/ambosta
 [core]
 	autocrlf = false
+  pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+  line-numbers = true
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+

@@ -101,3 +101,15 @@ function for_all_gomod() {
   isMac && GNU_FIND_CMD='gfind'
   $GNU_FIND_CMD -name go.mod -exec zsh -c 'cd $(dirname {}) && echo {} && '"$*" \;
 }
+
+
+function generate_commit_message() {
+  DIFF_FILE="/tmp/staged.diff"
+  CMD_FILE="/tmp/cmd.diff"
+  CURRENT_JB_IDE=$(echo -n $__CFBundleIdentifier | rev | tr '[:upper:]' '[:lower:]' | cut -d'.' -f1 | rev)
+  git diff --staged > $DIFF_FILE && \
+  echo "// Prompt: generate a good and thorough commit message using the conventional commit format for the given file, the message can have a body in bullet points also following the conventional commit format. The total body should be less than $(bc -e "$(cat $DIFF_FILE| wc -l) * 1.5 /100") lines. Don't be too specific, just give a general idea of what the changes are." > $CMD_FILE && \
+  cat $DIFF_FILE >> $CMD_FILE && \
+  (echo -n "Use prompt from the top of the file" |pbcopy) && \
+  $( ( echo $CURRENT_JB_IDE && \ls "$(dirname "$(which webstorm)")" ) | fzf) $CMD_FILE
+}

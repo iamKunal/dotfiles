@@ -7,14 +7,12 @@
 	postBuffer = 524288000
 
 
-[includeIf "gitdir:~/Documents/work/isec/"]
-  path = configs/isec.config
-
 [includeIf "gitdir:~/Documents/work/peerdb/"]
   path = configs/peerdb.config
 
-[url "ssh://git@bitbucket.org/ambosta"]
-  insteadOf = https://bitbucket.org/ambosta
+[includeIf "gitdir:~/Documents/work/clickhouse/"]
+  path = configs/clickhouse.config
+
 [core]
 	autocrlf = false
   pager = delta

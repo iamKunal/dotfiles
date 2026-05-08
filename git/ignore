@@ -82,3 +82,9 @@ fabric.properties
 .idea
 
 .localignore
+
+
+# Terragrunt debug vars
+terragrunt-debug.tfvars.json
+
+**/.claude/settings.local.json

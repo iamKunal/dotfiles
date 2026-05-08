@@ -1,4 +1,5 @@
 # vim: syntax=zsh:
+zmodload zsh/zprof
 
 if [[ -f '/home/linuxbrew/.linuxbrew/bin/brew' ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

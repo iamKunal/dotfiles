@@ -29,7 +29,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 
 
-setopt  appendhistory
+#setopt  appendhistory
 setopt  sharehistory
 setopt  incappendhistory
 
@@ -50,8 +50,8 @@ export ZPLUG_HOME=$HOME/.zplug
 source "$ZFILES_HOME/.zplugrc"
 
 
-HISTSIZE=100000
-SAVEHIST=100000
+HISTSIZE=1000000000
+SAVEHIST=1000000000
 setopt histignorespace
 
 source "$ZFILES_HOME/.myzshrc.after"

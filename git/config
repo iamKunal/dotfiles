@@ -1,5 +1,5 @@
 [user]
-	email = assaxor@gmail.com
+	email = 39487888+iamKunalGupta@users.noreply.github.com
 	name = Kunal Gupta
 [init]
 	defaultBranch = main
@@ -12,6 +12,10 @@
 
 [includeIf "gitdir:~/Documents/work/clickhouse/"]
   path = configs/clickhouse.config
+
+
+[url "ssh://git@github.com/clickhouse/"]
+  insteadOf = https://github.com/clickhouse/
 
 [core]
 	autocrlf = false
@@ -30,3 +34,8 @@
 [diff]
 	colorMoved = default
 
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

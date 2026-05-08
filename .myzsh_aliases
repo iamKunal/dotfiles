@@ -27,10 +27,10 @@ alias python=python3
 alias disten='du -ahd1 | sort -rh | head -n10 '
 
 # exa aliases
-alias ll="exa -l --git --time-style=long-iso --group-directories-first"
-alias l="exa -la --git --time-style=long-iso --group-directories-first"
-alias la="exa -lahg --git --time-style=long-iso --group-directories-first"
-alias ls="exa --group-directories-first"
+alias ll="eza -l --git --time-style=long-iso --group-directories-first"
+alias l="eza -la --git --time-style=long-iso --group-directories-first"
+alias la="eza -lahg --git --time-style=long-iso --group-directories-first"
+alias ls="eza --group-directories-first"
 
 #SUDO ALIAS
 alias sudo='sudo -p "$(print -P "  %F{red}\ue0c2%f%K{016} sudo %k%F{red}\ue0c0%f%   %F{247}Please enter password for [%f%F{green}${USER}%f%F{247}] : %f%k\n")" '
@@ -106,3 +106,5 @@ isMac && type brew &>/dev/null && type gcloud &>/dev/null && source "$(brew --pr
 
 isMac && alias dragon='open -a yoink '
 
+
+alias cg="$HOME/Documents/work/clickhouse/cg-main/clickgresctl.sh"

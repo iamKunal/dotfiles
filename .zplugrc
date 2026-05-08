@@ -43,6 +43,9 @@ zplug "momo-lab/zsh-abbrev-alias"
 
 
 
+##### atuin plugin for history sync
+zplug "atuinsh/atuin"
+
 #### Install exa, use brew/deb
 # zplug "ogham/exa", from:gh-r, as:command, rename-to:exa, use:"*linux*"
 # zplug "ogham/exa", from:gh-r, as:command, rename-to:exa, use:"*macos-x86_64*"

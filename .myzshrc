@@ -66,3 +66,5 @@ fi
 
 export ATUIN_CONFIG_DIR="$ZFILES_HOME/atuin"
 export ATUIN_THEME_DIR="$ATUIN_CONFIG_DIR/themes"
+
+export MACKUP_CONFIG="$ZFILES_HOME/.mackup.cfg"

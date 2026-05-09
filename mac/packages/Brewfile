@@ -48,5 +48,9 @@ cask 'betterdisplay'
 cask 'google-chrome'
 cask 'appcleaner'
 cask 'markedit'
+cask 'shottr'
+cask 'yoink'
+cask 'whatsapp'
+cask 'tailscale'
 mas 'Bandwidth+', id: 490461369
 

@@ -20,5 +20,5 @@ for entry in $LINKS; do
   dst=${entry##*:}
   target=$HOME/$dst
   mkdir -p "$(dirname -- "$target")"
-  ln -s "$REAL_DIR/$src" "$target"
+  ln -sfn "$REAL_DIR/$src" "$target"
 done

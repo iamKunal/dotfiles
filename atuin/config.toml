@@ -294,7 +294,7 @@ sync_frequency = 5
 [logs]
 
 enabled = true
-level = 'trace'
+level = 'info'
 
 [theme]
 ## Color theme to use for rendering in the terminal.

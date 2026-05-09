@@ -51,6 +51,6 @@ cask 'markedit'
 cask 'shottr'
 cask 'yoink'
 cask 'whatsapp'
-cask 'tailscale'
+cask 'tailscale-app'
 mas 'Bandwidth+', id: 490461369
 

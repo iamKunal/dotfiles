@@ -1,0 +1,33 @@
+{
+    "profiles": [
+        {
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 591,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "consumer_key_code": "volume_decrement" },
+                            "to": [{ "mouse_key": { "vertical_wheel": -64 } }]
+                        },
+                        {
+                            "from": { "consumer_key_code": "volume_increment" },
+                            "to": [{ "mouse_key": { "vertical_wheel": 64 } }]
+                        }
+                    ]
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": {
+                "country_code": 0,
+                "keyboard_type_v2": "ansi"
+            }
+        }
+    ]
+}

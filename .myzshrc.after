@@ -1,4 +1,4 @@
-# vim: syntax=zsh:
+# vim: filetype=zsh:
 
 if zplug check momo-lab/zsh-abbrev-alias;
 then

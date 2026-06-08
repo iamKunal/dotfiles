@@ -1,13 +1,5 @@
-# vim: syntax=zsh:
+# vim: filetype=zsh:
 
-
-function isLinux() {
-  [[ $(uname) == 'Linux' ]];
-}
-
-function isMac() {
-  [[ $(uname) == 'Darwin' ]];
-}
 
 function daru(){
   /home/linuxbrew/.linuxbrew/bin/$1 ${@:2}
@@ -16,7 +8,7 @@ function daru(){
 ## LINUX
 # function download(){
 #   URL=$( xclip -selection c -o )
-#   #curl "$URL" -o /dev/null 2> /dev/null 
+#   #curl "$URL" -o /dev/null 2> /dev/null
 #   if [ $? -eq 0 ]; then
 #     aria2c -x16 "$URL" --seed-time=0 $@
 #   else
@@ -27,7 +19,7 @@ function daru(){
 
 function download(){
   URL=$( pbpaste )
-  #curl "$URL" -o /dev/null 2> /dev/null 
+  #curl "$URL" -o /dev/null 2> /dev/null
   if [ $? -eq 0 ]; then
     aria2c -x16 "$URL" --seed-time=0 $@
   else

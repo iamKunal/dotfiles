@@ -1,4 +1,4 @@
-# vim: syntax=zsh:
+# vim: filetype=zsh:
 
 ####    ZPLUG    ######
 source ~/.zplug/init.zsh

@@ -1,4 +1,4 @@
-# vim: syntax=zsh:
+# vim: filetype=zsh:
 
 #Setting the default text editor
 export EDITOR='vim'
@@ -98,7 +98,6 @@ SDKMAN_INIT_SCRIPT="$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # alias ec2=""
 
-isMac && export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/3.2.0/bin:$PATH"
 _LIBPQ_BIN_PATH=/opt/homebrew/opt/libpq/bin
 isMac && [ -d "$_LIBPQ_BIN_PATH" ] && export PATH="$_LIBPQ_BIN_PATH:$PATH"
 isMac && type brew &>/dev/null && type gcloud &>/dev/null && source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" && source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
